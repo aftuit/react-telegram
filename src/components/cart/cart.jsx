@@ -13,7 +13,12 @@ const Cart = ({ cartItems, onCheckout }) => {
         })}
       </p>
 
-      <Button title={`Buyurtma berish`} type={"checkout"} onClick={onCheckout} disable={cartItems.length == 0 ? true : false} />
+      <Button
+        title={cartItems.length == 0 ? "Buyurtma berish" : "To'lov"}
+        type={"checkout"}
+        onClick={onCheckout}
+        disable={cartItems.length == 0 ? true : false}
+      />
     </div>
   );
 };
